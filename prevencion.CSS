@@ -1,0 +1,92 @@
+.header,h1{  background:rgb(255, 5, 172 ) ; font-family:Goudy Stout ; font-size: 50px;color:rgb(12, 8, 2) ;}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:arial ;
+    
+
+}
+body{ background:black;
+ }
+ .container{
+   
+        width:100%;
+    
+        max-width :700px;
+        margin:auto;
+        margin-top:1px;
+}
+
+.lbl-menu{
+    background:rgb(5, 255, 234);
+   
+}
+ .lbl-menu label{
+ display:inline-block ;
+ padding: 39.4px;
+ color:rgb(2, 2, 17);
+ cursor: pointer;
+ transition: all 400ms ease;
+
+}
+ .lbl-menu label:hover{
+ background:hsl(305, 97%, 47%) ;
+
+}
+.content { 
+    position: relative;
+}
+.content div{
+  position: absolute;
+  line-height: 1.8;
+  transition:all 600ms ease; 
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.90);
+  padding: 10px; 
+  background:rgb(255, 250, 253);
+  padding-bottom: 20px;
+}
+
+
+#radio1,#radio2,#radio3,#radio4{
+    display:none ;
+}
+
+#radio1:checked ~ .tab1,
+#radio2:checked ~ .tab2,
+#radio3:checked ~ .tab3,
+#radio4:checked ~ .tab4
+{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+
+}
+.content div:after {
+position:absolute;
+content:"" ;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-top: 10px solid transparent;
+border-bottom: 10px solid rgb(37, 25, 25);
+bottom:100% ;
+left:90px;
+}
+.content .tab2::after{
+    left: 280px; 
+}
+.content .tab3::after{
+    left: 433px; 
+}
+.content .tab4::after{
+    left: 598px; 
+}
+
+.PA{ color: black;font-size: 40PX;}
+
+.lo{ color: white;width: 20;height: 20;padding-left: 600px}
